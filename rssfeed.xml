@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+
+<channel>
+  <item>
+      <title>Updates</title>
+      <link>https://wad-pro-raffriff.c9users.io/</link>
+      <description>Latest user client updates</description>
+  </item>
+  <item>
+    <title>Beauty News</title>
+    <link>http://www.vogue.co.uk/topic/beauty-news</link>
+    <description>Beauty News by Vogue</description>
+  </item>
+  <item>
+    <title>More Beauty News</title>
+    <link>http://www.instyle.com/beauty</link>
+    <description>New XML tutorial on W3Schools</description>
+  </item>
+</channel>
+
+</rss>
