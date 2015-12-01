@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Name </title>
+        <title> DKJ Makeup </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -9,31 +9,82 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
        
-       
-        
+      
     </head>
     <body>
         <div class="container-fluid">
             <div class="header">
                 <div class="12">.col-md-12</div>
             </div>
-            <div class="navbar">
-                <div class="col span1_of_3">.col-md-4</div>
+            
+    <a class="scrollToTop"> Scroll To Top</a>
+    <script>   
+    $(document).ready(function(){
+	
+	
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+	
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+	
+});
+    
+       
+    </script>
+           
+  
+            <div class="navbar navbar" >
+                <ul class="nav navbar-nav">
+              
+               <div class="col span1_of_3">.col-md-4</div>
                 <div class="col span2_of_3">.col-md-4</div>
                 <div class="col span3_of_3">.col-md-4</div>
-            </div>
-            
-                
+                </ul>
+       </div>
+      
+             
             <div class= "main">
                 <div class="col span1_of_2">.col-md-8</div>
                 <div class="col span2_of_2">.col-md-4</div>
-           
+          
             
             <div class="comment">
-                <div class="col com1_of_2">.col-md-8</div>
-                <div class="col com2_of_2">.col-md-4</div>
-             </div>   
-            </div>
+                <div class="col com1_of_2">
+                    <p>why not comment on this website</p>
+               <form action="index.php" method="post">
+                            Name:    
+                    <input type="text" name="nameBox" size ="10"/>
+                    <br>
+                     Add comment:
+                     <br>
+                     <textarea rows="3" cols="40" name="textarea">
+                    
+                         </textarea>
+                   
+                    <br>
+                   
+                    <input type="submit"/>
+                    </form>
+                    
+                </div>
+                
+                
+                <div class="col com2_of_2">.col-md-4
+                <a href="https://wad-pro-raffriff.c9users.io/rss.xml">
+                <img src="http://www.w3schools.com/xml/pic_rss.gif" width="36" height="14">
+                </a>
+                 </div>
+                 
+             </div> 
+           </div>
         </div>    
     </body>
 </html>
