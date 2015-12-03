@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
        
-      
+     
     </head>
     <body>
         <div class="container-fluid">
@@ -42,38 +42,93 @@
            
   
             <div class="navbar navbar" >
+     
+
                 <ul class="nav navbar-nav">
               
-               <div class="col span1_of_3">.col-md-4</div>
-                <div class="col span2_of_3">.col-md-4</div>
-                <div class="col span3_of_3">.col-md-4</div>
-                </ul>
+    <div class="col span1_of_3">
+    <form name="frmSelect">
+    <select name="prez">
+    <option>Eye Shadow</option>
+    <option>MAC</option>
+    <option>INGLOT</option>
+    <option>Urban Decay</option>
+    </select>
+    </form>
+    </div>
+         <div class="col span2_of_3">
+            <form name="frmSelect">
+            <select name="prez">
+            <option>Mascara</option>
+            <option>MAC</option>
+            <option>INGLOT</option>
+            <option>Urban Decay</option>
+            </select>
+            </form>
+            </div>
+                <div class="col span3_of_3">
+                <form name="frmSelect">
+                <select name="prez">
+                <option>Eye Liner</option>
+                <option>MAC</option>
+                <option>INGLOT</option>
+                <option>Urban Decay</option>
+                </select>
+                </form>
+                </div>
+           
+          </ul>
        </div>
       
              
             <div class= "main">
-                <div class="col span1_of_2">.col-md-8</div>
+                <div class="col span1_of_2" id="rss">.col-md-8</div>
                 <div class="col span2_of_2">.col-md-4</div>
           
             
             <div class="comment">
+               
                 <div class="col com1_of_2">
                     <p>why not comment on this website</p>
+<script>
+        $(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
                <form action="index.php" method="post">
                             Name:    
-                    <input type="text" name="nameBox" size ="10"/>
+       <input type="text" name="nameBox" size ="10"/>
+       <!--script>
+        $(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script-->
+       
+                 
+                   
                     <br>
                      Add comment:
+       
                      <br>
                      <textarea rows="3" cols="40" name="textarea">
-                    
-                         </textarea>
-                   
+     
+                 </textarea>
+                 
                     <br>
-                   
+                  
                     <input type="submit"/>
                     </form>
-                    
+                   
                 </div>
                 
                 
