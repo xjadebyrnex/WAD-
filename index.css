@@ -3,11 +3,16 @@
     clear: both;
     padding:0px;
     margin:0px;
+   
+  
 }
 .header{
-    background-color:blue;
-    
-    height:200px;
+    /*background-color:blue;*/
+    clear:both;
+    height:190px;
+    width:100%;
+    background-image: url('main.jpg');
+    background-repeat:no-repeat;
     
     
 }
@@ -16,7 +21,7 @@
 
 .scrollToTop{
 	width:100px; 
-	height:130px;
+	height:140px;
 	text-align:center; 
 	font-weight: bold;
 	color: #444;
@@ -25,7 +30,8 @@
 	top:380px;
 	right:40px;
 	display:none;
-	background: url('scroll.png') no-repeat 0px 20px;
+	background-image: url('scroll.jpg');
+	background-repeat:no-repeat;
 	opacity:5;
 }
 .scrollToTop:hover{
@@ -37,8 +43,7 @@
     display:block;
     float:left;
     background-color:purple;
-   
-    height:75px;
+    height:95px;
 }
     .navbar:first-child{margin-left: 0;}
     
@@ -47,34 +52,106 @@
     display:table;}
     .group:after {clear:both;}
     .group{zoom:1; }
+    
+    ul
+{
+    font-family: Arial, Verdana;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align:center;
+}
+
+ul li
+{
+    display: block;
+    position:center;
+    float:center;
+}
+
+li ul
+{
+    display: none;
+}
+
+ul li a 
+{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+    padding: 5px 15px 5px 15px;
+    background: #330033;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+
+ul li a:hover 
+{
+    background: #660033;
+}
+li:hover ul 
+{
+    display: block;
+    position: center;
+}
+
+li:hover li
+{
+    float: none;
+    font-size: 11px;
+}
+
+li:hover a 
+{
+    background: #663333;
+}
+
+li:hover li a:hover 
+{
+    background: #A80000 ;
+}
     .span1_of_3{
         width:33.3%;
-        background:black;
-        height:75px;
+        background:#660033;
+        height:95px;
         float:left;
-        border:4px solid purple;
+        border:4px #660033;
         box-sizing:border-box;
+        text-align:center;
+        background-image: url('eyesh.jpg');
+        background-position:center;
+       
+        
     }
     .span2_of_3{
         
         width:33.3%;
-        background:green;
-        float:right;
-        height:75px;
-        border:4px solid purple;
+        background:#660033;
+        float:left;
+        height:95px;
+        border:4px #660033;
         box-sizing:border-box;
+        text-align:center;
+        background-image: url('mascara.jpg');
+        background-position:center;
+        background-repeat:repeat;
         
         
     }
     .span3_of_3{
         
         width:33.3%;
-        background:white;
-        height:75px;
-        float:right;
-        border:4px solid purple;
+        background:#660033;
+        height:95px;
+        float:left;
+        order:4px #660033;
         box-sizing:border-box;
-        
+        text-align:center;
+        background-image: url('eyeli.jpg');
+        background-position:center;
+     
         
 }
 .main{
@@ -83,6 +160,7 @@
     float:right;
     background-color:orange;
     height:950px;
+    
 }
 .main:first-child{margin-left: 0;}
     
@@ -94,26 +172,32 @@
     .span1_of_2{
         width:50%;
         background:red;
-        height:680px;
+        height:600px;
         float:left;
         border:4px solid blue;
         box-sizing:border-box;
+        
+    filter: alpha(opacity=40); 
+        
     }
     .span2_of_2{
         
         width:50%;
         background:yellow;
         float:right;
-        height:800px;
+        height:600px;
         border:5px solid blue;
         box-sizing:border-box;
+       
         
     }
     
  .comment{
      width:100%;
-     height:20px;
+     height:auto;
      background:green;
+     opacity: 0.9;
+     filter: alpha(opacity=80); 
  }
  .cooment:first-child{margin-left: 0;}
     
@@ -123,23 +207,136 @@
     .group:after {clear:both;}
     .group{zoom:1; }
     .com1_of_2{
-        width:50%;
+        width:100%;
         background:green;
-        height:271px;
+        height:auto;
         float:left;
         border:4px solid blue;
         box-sizing:border-box;
+        text-align:center;
+
        
             
         
     }
-    .com2_of_2{
-        
-        width:50%;
+   .com2_of2{
+       width:50%;
+       height:100px;
+       line-height:37px;
+       font-size:14px;
+       margin:0 5px 0 5px;
+       color:#555;
+       
+       /*width:auto;
         background:purple;
         float:right;
         height:150px;
         border:4px solid blue;
         box-sizing:border-box;
+        text-align:center; */
+   }
+    .comment-list
+    {
+        height:auto;
+        font-size:13px;
+        margin: 5px 5px 5px 5px;
+        color:#555;
+        border:1px solid black;
+    }
+    .comments-holder-ul
+    {
+        list-style-type: none;
+        margin:0px;
+        padding:0px;
+        width:auto;
+        height:auto;
+        overflow:hidden;
+        
         
     }
+    .comments-holder-ul .comment-holder
+    {
+        list-style-type:none;
+        background:#fffff5;
+        height:auto;
+        width:auto;
+        margin:5px 0 5px 0;
+        border:1px solid #e1e1e1;
+        overflow:hidden;
+        position:relative;
+    }
+    .comments-holder-ul .comment-holder:hover
+    {
+    background: #FFFFDB;
+    }
+    .comment-body
+    {
+        width:auto;
+        
+    }
+    
+    .comments-holder-ul .comment-holder .username-field
+    {
+        height:25px;
+        
+        line-height:22px;
+        color:blue;
+        font-size:13px;
+        margin:0 0 10px 10px;
+        position:absolute;
+    }
+    comments-holder-ul .comment-holder .comment-text
+    {
+        display:block;
+        width:auto;
+        font-size:11px;
+        word-wrap:normal;
+        margin:10px 0 0 0;
+    }
+    .comment-button-holder
+    {
+        position:absolute;
+        top:0px;
+        right:0px;
+        width:100px;
+        height:20px;
+        
+    }
+    .comment-button-holder ul
+    {
+        list-style-type:none;
+        width:auto;
+        height:auto;
+        overflow:hidden;
+    }
+    
+    .comment-button-holder ul il
+    {
+        float:right;
+        height:20px;
+        width:20px;
+        
+        text-align:center;
+        line-height:17px;
+        color:blue;
+        background:red;
+        cursor:pointer;
+        
+    }
+     .comment-button-holder ul il:hover
+     {
+         color:#444;
+         background:#6D8DCD;
+     }
+     table, th, td {
+         border: 1px solid black;
+         border-collapse:collapse;
+     }
+     th, td {
+         padding: 5px;
+     }
+    
+    
+    
+    
+    

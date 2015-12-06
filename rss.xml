@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="latest.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="rsstrans.xsl" ?>
 <rss version="2.0">
   <channel>
-    <generator>RSS Builder by B!Soft</generator>
-    <title>Eye Beauty</title>
-    <link>https://ide.c9.io/raffriff/wad_pro</link>
-    <description>Eye Beauty Cosmetic User Comments</description>
-    <language>en</language>
-    <item>
-      <title>&lt;new&gt;</title>
-      <pubDate>Tue, 1 Dec 2015 17:29:52 GMT</pubDate>
-      <description><![CDATA[]]></description>
-    </item>
-    <item>
-      <title>User Comments</title>
-      <pubDate>Tue, 1 Dec 2015 17:22:19 GMT</pubDate>
-      <link>https://ide.c9.io/raffriff/wad_pro</link>
-      <author>wadmuskateers</author>
-      <description><![CDATA[]]></description>
-    </item>
   </channel>
 </rss>

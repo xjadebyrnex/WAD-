@@ -12,12 +12,15 @@
      
     </head>
     <body>
+
         <div class="container-fluid">
             <div class="header">
                 <div class="12">.col-md-12</div>
             </div>
             
-    <a class="scrollToTop"> Scroll To Top</a>
+    <a class="scrollToTop" ><br> </a>
+   
+   
    
     <script>   
     $(document).ready(function(){
@@ -37,45 +40,45 @@
 	});
 	
 });
-    
        
     </script>
            
   
             <div class="navbar navbar" >
-     
 
-                <ul class="nav navbar-nav">
-              
+<ul id="menu">
+     
     <div class="col span1_of_3">
-    <form name="frmSelect">
-    <select name="prez">
-    <option>Eye Shadow</option>
-    <option>MAC</option>
-    <option>INGLOT</option>
-    <option>Urban Decay</option>
-    </select>
-    </form>
+    
+      <li><a href="">Eye Shadow Products</a>
+        <ul>
+        <li><a href="https://www.maccosmetics.com/products/13840/Products/Makeup/Eyes/Shadow">MAC</a></li>
+        <li><a href="http://inglot.ie/eyes/eyeshadow.html">INGLOT</a></li>
+        <li><a href="http://www.urbandecay.com/eyes/eyeshadow">Urban Decay</a></li>
+        </ul>
+      </li>
     </div>
          <div class="col span2_of_3">
-            <form name="frmSelect">
-            <select name="prez">
-            <option>Mascara</option>
-            <option>MAC</option>
-            <option>INGLOT</option>
-            <option>Urban Decay</option>
-            </select>
-            </form>
+           
+            <li><a href="">Mascara Products</a>
+        <ul>
+        <li><a href="https://www.maccosmetics.com/products/13839/Products/Makeup/Eyes/Mascara">MAC</a></li>
+        <li><a href="http://inglot.ie/eyes/mascara.html">INGLOT</a></li>
+        <li><a href="http://www.urbandecay.com/eyes/mascara">Urban Decay</a></li>
+       
+        </ul>
+      </li>
             </div>
                 <div class="col span3_of_3">
-                <form name="frmSelect">
-                <select name="prez">
-                <option>Eye Liner</option>
-                <option>MAC</option>
-                <option>INGLOT</option>
-                <option>Urban Decay</option>
-                </select>
-                </form>
+                
+                <li><a href="" >Eye Liner Products</a>
+        <ul>
+        <li><a href="https://www.maccosmetics.com/products/13838/Products/Makeup/Eyes/Liner">MAC</a></li>
+        <li><a href="http://inglot.ie/eyes/eyeshadow.html">INGLOT</a></li>
+        <li><a href="http://www.urbandecay.com/eyes/eyeliner">Urban Decay</a></li>
+        </ul>
+      </li>
+    
                 </div>
            
           </ul>
@@ -83,9 +86,48 @@
       
              
             <div class= "main">
-                <div class="col span1_of_2" id="rss">.col-md-8</div>
-                <div class="col span2_of_2">.col-md-4</div>
-          
+                <div class="col span1_of_2">
+                    <button type="button" onclick="loadXMLDoc()">Eye Beauty Products</button>
+                    <br><br>
+                    <table id="demo"></table>
+
+                    <script>
+                        function loadXMLDoc() {
+                             var xmlhttp = new XMLHttpRequest();
+                             xmlhttp.onreadystatechange = function() {
+                                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                                     myFunction(xmlhttp);
+                                 }
+                             };
+                             xmlhttp.open("GET", "makeup.xml", true);
+                             xmlhttp.send();
+                         }
+                        function myFunction(xml) {
+                        var i;
+                        var xmlDoc = xml.responseXML;
+                        var table="<tr><th>Artist</th><th>Title</th></tr>";
+                        var x = xmlDoc.getElementsByTagName("products");
+                        for (i = 0; i <x.length; i++) { 
+                            table += "<tr><td>" +
+                            x[i].getElementsByTagName("brand")[0].childNodes[0].nodeValue +
+                            "</td><td>" +
+                            x[i].getElementsByTagName("prange")[0].childNodes[0].nodeValue +
+                            "</td></tr>";
+                            x[i].getElementsByTagName("location1")[0].childNodes[0].nodeValue +
+                            "</td></tr>";
+                            x[i].getElementsByTagName("location2")[0].childNodes[0].nodeValue +
+                            "</td></tr>";
+                            x[i].getElementsByTagName("location3")[0].childNodes[0].nodeValue +
+                            "</td></tr>";
+                        }
+                        document.getElementById("demo").innerHTML = table;
+                        }
+                    </script>
+                
+                
+                </div>
+                <div class="col span2_of_2"></div>
+         
             
             <div class="comment">
                
@@ -101,32 +143,108 @@
     });
 });
 </script>
-              
+
+
+<script type="text/javascript">
+   function myalert() {
+    var x = document.forms["myForm"]["nameBox"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        
+    }
+}
+         
+</script> 
                    
- 
-            <form action="index.php" method="post">
-                   <input type="text" name="nameBox" size ="10"/>
-             
+
+    <form action="comments.php" method="post" id="myForm">
+                Name:
+                <br>
+                   <input type="text" name="nameBox" size ="10" />
+                
+        	
                     <br>
                     Add comment:
                     <br>
-                    <textarea rows="3" cols="40" name="textarea">
-      
+                    <textarea rows="3" cols="40" name="textarea" text-align="center">
+                        
                     </textarea>
                     <br>
                   
-                    <input type="submit"/>
+                    <input type="submit" onClick="myalert()" />
             </form>
                    
-                </div>
                 
                 
-                <div class="col com2_of_2">.col-md-4
-                <a href="https://wad-pro-raffriff.c9users.io/rss.xml">
+                
+                <div class="com2_of_2">
+              
+                   <h3>User feedback ......</h3>
+                   <div class="comment-list">
+                       <ul class ="comments-holder-ul">
+                           <li class ="comment-holder" id="_1">
+                              
+                              <div class="comment-body">
+                               <h3 class="username-field">
+                                   jade byrne
+                                </h3>
+                                
+                                <div class="comment-text">
+                                    peoples comments here
+                                    
+                                    <div class ="comment-button-holder">
+                                      <ul>
+                                          <li class="delete-btn">X</li> 
+                                        </ul>
+                                    </div>
+                                   </div>
+                            
+                            <li class ="comment-holder" id="_1">
+                               <ul class ="comments-holder-ul">
+                           <li class ="comment-holder" id="_1"></il>
+                              </ul>
+                              <div class="comment-body">
+                              
+                              
+                               <h3 class="username-field">
+                                   jade byrne
+                                </h3>
+                        
+                                <div class="comment-text">
+                                    
+                                    
+                                    Lorem Ipsum is simply dummy text of 
+                                    the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's
+                                    standard dummy text ever since the 1500s
+                                    , when an unknown printer took a galley 
+                                    of type and scrambled it to make a type 
+                                    specimen book. It has survived not only 
+                                    five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially
+                                    unchanged.
+                                    </div>
+                                    <div class="comment-text">
+                                    peoples comments here
+                                    
+                                    <div class ="comment-button-holder">
+                                      <ul>
+                                          <li class="delete-btn">X</li> 
+                                        </ul>
+                                    </div>
+                                    
+                                       </ul> 
+                            
+                        
+                               
+               <!-- <a href="https://wad-pro-raffriff.c9users.io/rss.xml">
                 <img src="http://www.w3schools.com/xml/pic_rss.gif" width="36" height="14"/>
-                </a>
+                </a>-->
                  </div>
-                 
+                 </div>
+                 </div>
+                 </div>
+                 </div>
              </div> 
            </div>
         </div>    

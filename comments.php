@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>comment box</title>
+
 
 <?php
   
@@ -34,9 +31,9 @@
 <script type="text/javascript">
 function post()
 {
-  var textarea = document.getElementById("textarea").value;
-  var nameBox = document.getElementById("nameBox").value;
-  if(teaxtarea && nameBox)
+  var comment = document.getElementById("comment").value;
+  var name = document.getElementById("username").value;
+  if(comment && name)
   {
     $.ajax
     ({
@@ -44,14 +41,14 @@ function post()
       url: 'post_comment.php',
       data: 
       {
-         user_comm:textarea,
-	     user_name:nameBox
+         user_comm:comment,
+	     user_name:name
       },
       success: function (response) 
       {
 	    document.getElementById("all_comments").innerHTML=response+document.getElementById("all_comments").innerHTML;
-	    document.getElementById(" textarea").value="";
-        document.getElementById("nameBox").value="";
+	    document.getElementById("comment").value="";
+        document.getElementById("username").value="";
   
       }
     });
@@ -68,7 +65,7 @@ function post()
   <h1>Instant Comment System Using Ajax,PHP and MySQL</h1>
 
   <form method='post' action="" onsubmit="return post();">
-  <textarea id="textarea" placeholder="Write Your Comment Here....."></textarea>
+  <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="nameBox" placeholder="Your Name">
   <br>
@@ -88,8 +85,8 @@ function post()
     $comm = mysql_query("select name,comment,post_time from comments order by post_time desc");
     while($row=mysql_fetch_array($comm))
     {
-	  $name=$row['nameBox'];
-	  $comment=$row['textarea'];
+	  $name=$row['name'];
+	  $comment=$row['comment'];
       $time=$row['post_time'];
     ?>
 	
