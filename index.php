@@ -102,6 +102,60 @@ function post()
     <?php
     }
     ?>
+    
+    
+    
+  </div>
+  <div class="col span1_of_2">
+    <div style="overflow-x: hidden; overflow-y: scroll; height:300px; width:100%" >
+      <?php echo $url ?>
+</div>
+    <?php 
+    function getPagePost($url, $data = array(), $proxy='', $userpass='', $header = array()) {
+        $ch = curl_init();
+
+        if(!empty($header)){
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $header );
+            curl_setopt($ch,CURLOPT_ENCODING , "gzip");
+        }
+
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+        if($this->useCookie)
+            curl_setopt ($ch, CURLOPT_COOKIEJAR, $this->ckfile);         
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+
+        if(!empty($proxy))
+        curl_setopt($ch, CURLOPT_PROXY, $proxy);
+
+        if(!empty($userpass))
+        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $userpass);
+
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+
+        $result = curl_exec($ch);
+
+        if($result === false) {
+            $result = curl_error($ch);
+        }   
+
+        curl_close($ch);
+        return $result;
+    }
+    ?>
+    <?php if(isset($_POST['btnsubmit'])){
+
+require_once 'scraper.php';
+$scraper = new Scraper(); 
+$url = $scraper->getPagePost($_POST['url']);
+?>  
+
+     <div style="overflow-x: hidden; overflow-y: scroll; height:300px; width:100%" >
+          <?php echo $url; ?>
+     </div>
+     <?php } ?>
   </div>
 
 </body>

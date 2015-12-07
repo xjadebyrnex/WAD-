@@ -9,7 +9,7 @@
 .header{
     /*background-color:blue;*/
     clear:both;
-    height:190px;
+    height:180px;
     width:100%;
     background-image: url('main.jpg');
     background-repeat:no-repeat;
@@ -171,11 +171,13 @@ li:hover li a:hover
     .group{zoom:1; }
     .span1_of_2{
         width:50%;
-        background:red;
+        background: linear-gradient(#330033, #d98cb3);
         height:600px;
         float:left;
-        border:4px solid blue;
+        border:3px white;
         box-sizing:border-box;
+
+
         
     filter: alpha(opacity=40); 
         
@@ -183,10 +185,10 @@ li:hover li a:hover
     .span2_of_2{
         
         width:50%;
-        background:yellow;
+        background: linear-gradient(#33001a, #d98cb3);
         float:right;
         height:600px;
-        border:5px solid blue;
+        border:3px white;
         box-sizing:border-box;
        
         
@@ -197,7 +199,10 @@ li:hover li a:hover
      height:auto;
      background:green;
      opacity: 0.9;
-     filter: alpha(opacity=80); 
+     filter: alpha(opacity=80);
+    
+     
+     
  }
  .cooment:first-child{margin-left: 0;}
     
@@ -208,12 +213,17 @@ li:hover li a:hover
     .group{zoom:1; }
     .com1_of_2{
         width:100%;
-        background:green;
+        background:#f2e5ff;
         height:auto;
         float:left;
-        border:4px solid blue;
+        border:4px solid #d8b3ff;
         box-sizing:border-box;
         text-align:center;
+        background-image:url(makeup.jpg);
+        color:#33001a;
+        font-family:Arial;
+        text-shadow:2px 2px white;
+        
 
        
             
@@ -226,6 +236,7 @@ li:hover li a:hover
        font-size:14px;
        margin:0 5px 0 5px;
        color:#555;
+       
        
        /*width:auto;
         background:purple;
@@ -241,7 +252,9 @@ li:hover li a:hover
         font-size:13px;
         margin: 5px 5px 5px 5px;
         color:#555;
-        border:1px solid black;
+        border-top:1px solid black;
+        
+        
     }
     .comments-holder-ul
     {
@@ -251,6 +264,7 @@ li:hover li a:hover
         width:auto;
         height:auto;
         overflow:hidden;
+        border-top:1px solid #d8b3ff;
         
         
     }
@@ -261,13 +275,13 @@ li:hover li a:hover
         height:auto;
         width:auto;
         margin:5px 0 5px 0;
-        border:1px solid #e1e1e1;
+        border:1px solid #d8b3ff;
         overflow:hidden;
         position:relative;
     }
     .comments-holder-ul .comment-holder:hover
     {
-    background: #FFFFDB;
+    background: #d8b3ff;
     }
     .comment-body
     {

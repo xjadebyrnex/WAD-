@@ -15,7 +15,7 @@
 
         <div class="container-fluid">
             <div class="header">
-                <div class="12">.col-md-12</div>
+                <div class="12"></div>
             </div>
             
     <a class="scrollToTop" ><br> </a>
@@ -52,7 +52,7 @@
     
       <li><a href="">Eye Shadow Products</a>
         <ul>
-        <li><a href="https://www.maccosmetics.com/products/13840/Products/Makeup/Eyes/Shadow">MAC</a></li>
+        <li><a href= "https://www.maccosmetics.com/products/13840/Products/Makeup/Eyes/Shadow">MAC</a></li>
         <li><a href="http://inglot.ie/eyes/eyeshadow.html">INGLOT</a></li>
         <li><a href="http://www.urbandecay.com/eyes/eyeshadow">Urban Decay</a></li>
         </ul>
@@ -87,6 +87,36 @@
              
             <div class= "main">
                 <div class="col span1_of_2">
+                    
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #330033;
+    border:  1px solid white;
+    color:white;
+    font-family:Arial;
+    font-size:18px;
+    text-shadow:1px;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+
+<div id="flip" >Click Me!</div>
+<div id="panel">Welcome to our Website</div>
+
                    <!-- <button type="button" onclick="loadXMLDoc()">Eye Beauty Products</button>
                     <br><br>
                     <table id="demo"></table>
@@ -132,7 +162,7 @@
             <div class="comment">
                
                 <div class="col com1_of_2">
-                    <p>why not comment on this website</p>
+                    
 <script>
         $(document).ready(function(){
     $("input").focus(function(){
@@ -156,15 +186,14 @@
          
 </script> 
                    
-
+    <h2>Why not comment on this Website</h2>
     <form action="comments.php" method="post" id="myForm">
-                Name:
+               <h3>Name:</h3> 
                 <br>
-                   <input type="text" name="nameBox" size ="10" />
-                
-        	
+                <input type="text" name="nameBox" size ="10"/>
+                   
                     <br>
-                    Add comment:
+                    <h3>Add comment:</h3>
                     <br>
                     <textarea rows="3" cols="40" name="textarea" text-align="center">
                         
@@ -251,5 +280,5 @@
     </body>
 <!--jade byrne :x14404242
 David Donovan :x14111021
-Karry Laptas :x //-->
+Karolina Laptas :x14446332 //-->
 </html>
